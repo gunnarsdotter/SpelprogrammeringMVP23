@@ -15,12 +15,6 @@ public class FlowerSpwaning : MonoBehaviour
     {
         InvokeRepeating("respanFlower", startDelay, spawnInterval);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-          
-    }
     private void respanFlower( )
     {
         if (flowers.Length < maxValue) { 
