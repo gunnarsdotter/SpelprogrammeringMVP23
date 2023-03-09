@@ -9,7 +9,7 @@ public class FlowerSpwaning : MonoBehaviour
     public float spawnPosMin = -5.0f;
     public float startDelay = 5;
     public float spawnInterval = 1.5f;
-    private int maxValue = 20; 
+    private int maxValue = 15; 
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +17,11 @@ public class FlowerSpwaning : MonoBehaviour
     }
     private void respanFlower( )
     {
-        if (flowers.Length < maxValue) { 
+        if (this.gameObject.transform.childCount < maxValue) { 
             Vector3 spawnPos = new Vector3(Random.Range(spawnPosMin, spawnPosMax), 0.0f, Random.Range(spawnPosMin, spawnPosMax));
             int indexFlower = Random.Range(0, flowers.Length);
-            Instantiate(flowers[indexFlower], spawnPos, flowers[indexFlower].transform.rotation);
+            var flower = Instantiate(flowers[indexFlower], spawnPos, flowers[indexFlower].transform.rotation);
+            flower.transform.parent = this.gameObject.transform;
         }
     }
 }

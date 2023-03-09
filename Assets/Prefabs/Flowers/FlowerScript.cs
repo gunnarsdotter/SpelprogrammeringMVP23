@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FlowerScript : MonoBehaviour
-{
+{ 
     public ParticleSystem startParticals;
     // Start is called before the first frame update
     void Start()
@@ -15,10 +15,11 @@ public class FlowerScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //if (inventory != full ){
-        Debug.Log(gameObject.name);
-        Destroy(gameObject);
-        //TODO Add floower to inventorys}
+        //Add floower to inventory
+        if (other.GetComponent<Inventory>().AddFlower(gameObject.tag))
+        {
+            Destroy(gameObject);
+        }
     }
     private void stopParticals()
     {

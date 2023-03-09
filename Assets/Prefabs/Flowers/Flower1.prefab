@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 41ba2a6f1d128f94eba95e5213a81254, type: 3}
       propertyPath: m_Name
-      value: flower02 Variant
+      value: Flower1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 41ba2a6f1d128f94eba95e5213a81254, type: 3}
+      propertyPath: m_TagString
+      value: Flower1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 41ba2a6f1d128f94eba95e5213a81254, type: 3}
       propertyPath: m_RootOrder

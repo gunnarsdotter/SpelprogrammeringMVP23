@@ -19,9 +19,16 @@ public class MovmentPlayer : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Fence"))
+        if (collision.gameObject.CompareTag("Sell"))
         {
-            Debug.Log("Hej");
+            gameObject.GetComponent<Inventory>().updateSellText(true);
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Sell"))
+        {
+            gameObject.GetComponent<Inventory>().updateSellText(false);
         }
     }
     /* Handel the movement of player*/
