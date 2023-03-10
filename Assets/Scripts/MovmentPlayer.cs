@@ -17,16 +17,16 @@ public class MovmentPlayer : MonoBehaviour
     {
         MovePlayer();
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Sell"))
+        if (other.gameObject.CompareTag("Sell"))
         {
             gameObject.GetComponent<Inventory>().updateSellText(true);
         }
-    }
-    private void OnCollisionExit(Collision collision)
+    } 
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.CompareTag("Sell"))
+        if (other.gameObject.CompareTag("Sell"))
         {
             gameObject.GetComponent<Inventory>().updateSellText(false);
         }
