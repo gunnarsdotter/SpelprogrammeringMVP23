@@ -80,7 +80,7 @@ public class Inventory : MonoBehaviour
     }
     public void updateMonyText(int money)
     {
-            MonyeText.text = "Amount: " + money;
+            MonyeText.text = money.ToString();
     }
     public void updateSellText(bool active)
     {
