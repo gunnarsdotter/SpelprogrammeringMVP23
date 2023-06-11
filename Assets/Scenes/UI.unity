@@ -616,6 +616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268250881}
   - component: {fileID: 268250880}
+  - component: {fileID: 268250882}
   m_Layer: 0
   m_Name: ScriptObject
   m_TagString: Untagged
@@ -639,6 +640,7 @@ MonoBehaviour:
   prefab: {fileID: 7919083840482587920, guid: bb028e036cf80554d8993da894ac65f4, type: 3}
   StartFrame: {fileID: 1785868660}
   HighScore: {fileID: 353082241}
+  Scriptobject: {fileID: 268250879}
 --- !u!4 &268250881
 Transform:
   m_ObjectHideFlags: 0
@@ -654,6 +656,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268250882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268250879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16249e2423ed94646b0e5f08c7fda008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &268264418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1292,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 268250880}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: CloseHighscoore
+        m_MethodName: CloseHighscore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
